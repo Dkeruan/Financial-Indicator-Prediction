@@ -60,6 +60,24 @@ We then trained the XGBoost model, accounting for temporal dependencies in the d
 
 Finally, we evaluated the best model on the test set to assess its performance. We computed metrics such as accuracy, precision, recall, and F1-score to measure the model's effectiveness in predicting stock performance based on financial indicators.
 
-This methodology allowed us to effectively preprocess the data, train a robust XGBoost model, and evaluate its performance, ultimately providing insights into the predictive power of financial indicators for stock performance.
+This methodology allowed us to effectively preprocess the data, train a robust XGBoost model, and evaluate its performance, ultimately providing insights into the predictive power of financial indicators for stock performance.  
+
+
+**Results**
+
+**Original Data:**
+- The model achieved an accuracy of 0.36, indicating that it correctly predicted the class label for approximately 36% of instances in the test set. 
+- Precision for Class 0 (stocks not worth buying) was low at 0.23, while recall was relatively high at 0.86. This suggests that the model correctly identified stocks to avoid, but it cast a broad net, leading to a significant number of false negatives.
+- For Class 1 (stocks worth buying), precision was higher at 0.85, indicating that the model was often correct when predicting a stock as worthy. However, recall was low at 0.22, indicating that the model missed many instances of actual positives.
+
+**Imputed Data:**
+- After imputing missing values, the model's accuracy improved to 0.50, with noticeable improvements in precision and recall for both classes.
+- Precision for Class 0 increased to 0.30, while recall remained high at 0.84, indicating better performance in identifying stocks to avoid.
+- For Class 1, precision decreased slightly to 0.87, while recall improved marginally to 0.40, indicating a better balance between correctly identifying worthy stocks and avoiding false positives.
+
+**Interpretation:**
+- The XGBoost model exhibited risk-averse behavior, with a cautious approach in predicting stock performance. It demonstrated a tendency to identify stocks as not worth buying, leading to a high precision for Class 0 but low recall. Conversely, while the model correctly identified some worthy stocks (Class 1), it missed many positive instances, resulting in a low recall score.
+- Despite its pessimistic tendencies, the model showed promise in identifying truly worthy stocks when it made positive predictions, as evidenced by its high precision score. However, further optimization may be required to improve recall and achieve a more balanced performance.
+
 
 
