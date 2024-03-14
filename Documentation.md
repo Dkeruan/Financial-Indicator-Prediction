@@ -50,7 +50,7 @@ XGBoost, short for Extreme Gradient Boosting, is an efficient and scalable imple
 
 **Data Preprocessing**
 
-The first step in our methodology was preprocessing the data. We addressed missing values by calculating the percentage of missing values in each feature for each year's dataframe. Features with a significant amount of missing values were filtered out. Leveraging domain knowledge in economics, we further pruned features and employed mean, median, and mode imputation strategies to reduce bias and improve model performance. Additionally, we identified and handled significant outliers in the data.
+The first step in our methodology was preprocessing the data. We addressed missing values by calculating the percentage of missing values in each feature for each year's data. Features with a significant amount of missing values were filtered out. Leveraging domain knowledge in economics, we further pruned features and employed mean, median, and mode imputation strategies to reduce bias and improve model performance. Additionally, we identified and handled significant outliers in the data.
 
 **Model Training**
 
@@ -85,7 +85,7 @@ This methodology allowed us to effectively preprocess the data, train a robust X
 
 **Discussion**
 
-Upon reviewing the findings of our project, it is evident that the XGBoost model demonstrates a risk-averse and cautious approach in classifying stocks. While its tendency to identify stocks as not worth buying (Class 0) may mitigate the risk of investing in underperforming stocks, it also presents a challenge in potentially missing out on profitable investment opportunities. Particularly noteworthy is the model's performance in terms of recall for Class 1, which suggests opportunities for improvement to capture more instances of worthy stocks.
+Upon reviewing the results, it is evident that the XGBoost model demonstrates a risk-averse and cautious approach in classifying stocks. While its tendency to identify stocks as not worth buying (Class 0) may mitigate the risk of investing in underperforming stocks, it also presents a challenge in potentially missing out on profitable investment opportunities. Particularly noteworthy is the model's performance in terms of recall for Class 1, which suggests opportunities for improvement to capture more instances of worthy stocks.
 
 Moving forward, enhancing the model's predictive power could be achieved by incorporating additional features or refining existing ones. Exploring alternative machine learning algorithms and ensemble methods may also yield valuable insights into the intricate relationship between financial indicators and stock performance.
 
