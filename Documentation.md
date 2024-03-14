@@ -20,7 +20,7 @@ Each dataset includes over 200 financial indicators commonly found in yearly 10-
 
 <br/>
 
-**Data Characteristics:**  
+**Data Characteristics**  
 
 - Missing Values: Some financial indicator values are missing (NaN cells), allowing users to choose appropriate cleaning techniques such as dropna or fillna.  
 
@@ -34,7 +34,7 @@ Each dataset includes over 200 financial indicators commonly found in yearly 10-
 
   - Class 0: Indicates stocks that should not be bought, as their value is predicted to decrease (negative price variation).  
   
-**Preprocessing Steps:**  
+**Preprocessing Steps**  
 
 Before analysis, the dataset underwent preprocessing steps, including:  
 
@@ -63,7 +63,9 @@ Finally, we evaluated the best model on the test set to assess its performance. 
 This methodology allowed us to effectively preprocess the data, train a robust XGBoost model, and evaluate its performance, ultimately providing insights into the predictive power of financial indicators for stock performance.  
 
 
-**Results**
+**Results**  
+
+![Metrics Comparisons](References/class_report.png)
 
 **Original Data:**
 - The model achieved an accuracy of 0.36, indicating that it correctly predicted the class label for approximately 36% of instances in the test set. 
@@ -78,6 +80,17 @@ This methodology allowed us to effectively preprocess the data, train a robust X
 **Interpretation:**
 - The XGBoost model exhibited risk-averse behavior, with a cautious approach in predicting stock performance. It demonstrated a tendency to identify stocks as not worth buying, leading to a high precision for Class 0 but low recall. Conversely, while the model correctly identified some worthy stocks (Class 1), it missed many positive instances, resulting in a low recall score.
 - Despite its pessimistic tendencies, the model showed promise in identifying truly worthy stocks when it made positive predictions, as evidenced by its high precision score. However, further optimization may be required to improve recall and achieve a more balanced performance.
+  
+
+
+**Discussion**
+
+Upon reviewing the findings of our project, it is evident that the XGBoost model demonstrates a risk-averse and cautious approach in classifying stocks. While its tendency to identify stocks as not worth buying (Class 0) may mitigate the risk of investing in underperforming stocks, it also presents a challenge in potentially missing out on profitable investment opportunities. Particularly noteworthy is the model's performance in terms of recall for Class 1, which suggests opportunities for improvement to capture more instances of worthy stocks.
+
+Moving forward, enhancing the model's predictive power could be achieved by incorporating additional features or refining existing ones. Exploring alternative machine learning algorithms and ensemble methods may also yield valuable insights into the intricate relationship between financial indicators and stock performance.
+
+In summary, while the XGBoost model shows promise in predicting stock performance, there is room for refinement and optimization to address the identified limitations. By iteratively improving the model and leveraging advanced modeling techniques, we can strive to deliver more robust predictions, thereby empowering investors with valuable insights for informed decision-making in the dynamic financial landscape.
+
 
 
 
