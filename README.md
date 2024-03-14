@@ -1,6 +1,6 @@
 # **Financial-Indicator-Prediction**  
 
-This project focuses on training an XGBoost machine learning model on a dataset spanning from 2018 to 2024. The dataset encompasses over 200 financial indicators commonly found in 10-K filings from a diverse range of publicly traded US stocks.  
+This project focuses on training an XGBoost machine learning model on a dataset spanning from 2014 to 2018. The dataset encompasses over 200 financial indicators commonly found in 10-K filings from a diverse range of publicly traded US stocks.  
 
 **Project Author**:  
 Daniel Ruan  
