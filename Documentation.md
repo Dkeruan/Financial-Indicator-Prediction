@@ -40,5 +40,26 @@ Before analysis, the dataset underwent preprocessing steps, including:
 
 - Exploratory Data Analysis: Examining the structure of the data to understand its format and characteristics.  
 
-- Label Correction: Correcting errors in labeling and checking for inconsistencies in the target variable.  
+- Label Correction: Correcting errors in labeling and checking for inconsistencies in the target variable.
+
+**Methodology**
+
+**XGBoost Overview**
+
+XGBoost, short for Extreme Gradient Boosting, is an efficient and scalable implementation of gradient boosting machines. It is a powerful machine learning algorithm known for its speed and performance in handling structured/tabular data. XGBoost works by sequentially adding decision trees to an ensemble, where each subsequent tree corrects the errors made by the previous ones. It incorporates regularization techniques to prevent overfitting and is capable of handling missing values and nonlinear relationships in the data.
+
+**Data Preprocessing**
+
+The first step in our methodology was preprocessing the data. We addressed missing values by calculating the percentage of missing values in each feature for each year's dataframe. Features with a significant amount of missing values were filtered out. Leveraging domain knowledge in economics, we further pruned features and employed mean, median, and mode imputation strategies to reduce bias and improve model performance. Additionally, we identified and handled significant outliers in the data.
+
+**Model Training**
+
+We then trained the XGBoost model, accounting for temporal dependencies in the data by creating lag features of the target variable. The data was split into training and testing sets, with data from 2014 to 2017 used for training and data from 2018 used for testing. Hyperparameter tuning was performed using GridSearch to find the best-performing model configuration.
+
+**Model Evaluation**
+
+Finally, we evaluated the best model on the test set to assess its performance. We computed metrics such as accuracy, precision, recall, and F1-score to measure the model's effectiveness in predicting stock performance based on financial indicators.
+
+This methodology allowed us to effectively preprocess the data, train a robust XGBoost model, and evaluate its performance, ultimately providing insights into the predictive power of financial indicators for stock performance.
+
 
