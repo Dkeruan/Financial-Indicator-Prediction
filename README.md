@@ -9,12 +9,6 @@ By leveraging this rich dataset spanning from 2018 to 2024, we aim to investigat
 
 This dataset repository consists of the following CSV files, each containing financial data for US stocks from 2014 to 2018:  
 
-- 2014_Financial_Data.csv <br/>
-- 2015_Financial_Data.csv <br/>
-- 2016_Financial_Data.csv <br/>
-- 2017_Financial_Data.csv <br/>
-- 2018_Financial_Data.csv <br/>
-
 Each dataset includes over 200 financial indicators commonly found in yearly 10-K filings of publicly traded companies. On average, there are approximately 4,000 stocks listed in each dataset. The dataset was compiled using the Financial Modeling Prep API and pandas_datareader.
 
 <br/>
